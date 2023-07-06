@@ -1,9 +1,9 @@
 INSTALL_DIR = /usr/local/bin
-SENDMIDI_CMAKE = SendMIDI/CMakelists.txt
-RECEIVEMIDI_CMAKE = ReceiveMIDI/CMakelists.txt
+SENDMIDI_CMAKE = SendMIDI/CMakeLists.txt
+RECEIVEMIDI_CMAKE = ReceiveMIDI/CMakeLists.txt
 
 
-.PHONEY: build configure install clean
+.PHONEY: setup configure build install clean
 
 all: build
 
@@ -13,7 +13,9 @@ $(RECEIVEMIDI_CMAKE):
 $(SENDMIDI_CMAKE):
 	@cp cmake/sendmidi.cmake $(SENDMIDI_CMAKE)
 
-configure: $(RECEIVEMIDI_CMAKE) $(SENDMIDI_CMAKE)
+setup: $(RECEIVEMIDI_CMAKE) $(SENDMIDI_CMAKE)
+
+configure: setup
 	@mkdir -p build && cd build && cmake ..
 
 build: configure
