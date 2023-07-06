@@ -18,7 +18,8 @@ A Makefile frontend is provided to keep things as simple as possible.
 ## Usage
 
 ```bash
-git clone --recursive https://github.com/shakfu/miditools.git
+git clone --depth=1 --shallow-submodules \
+	https://github.com/shakfu/miditools.git
 cd miditools
 make
 ```
