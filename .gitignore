@@ -1,3 +1,8 @@
+.DS_Store
+build/
+SendMIDI/CMakelists.txt
+ReceiveMIDI/CMakelists.txt
+
 # Prerequisites
 *.d
 

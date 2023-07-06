@@ -1,0 +1,9 @@
+[submodule "JUCE"]
+	path = JUCE
+	url = https://github.com/juce-framework/JUCE.git
+[submodule "SendMIDI"]
+	path = SendMIDI
+	url = https://github.com/gbevin/SendMIDI.git
+[submodule "ReceiveMIDI"]
+	path = ReceiveMIDI
+	url = https://github.com/gbevin/ReceiveMIDI.git
