@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(SENDMIDI VERSION 0.0.1)
+project(SENDMIDI VERSION 1.2.1)
 
 juce_add_console_app(sendmidi
     PRODUCT_NAME "sendmidi")
@@ -26,6 +26,5 @@ target_link_libraries(sendmidi
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_warning_flags
-        # "-latomic"
+        $<$<BOOL:${CMAKE_HOST_LINUX}>:"-latomic">
 )
-

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project(RECEIVEMIDI VERSION 0.0.1)
+project(RECEIVEMIDI VERSION 1.3.1)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
@@ -34,6 +34,6 @@ target_link_libraries(receivemidi
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_warning_flags
-        # "-latomic"
+        $<$<BOOL:${CMAKE_HOST_LINUX}>:"-latomic">
 )
 
