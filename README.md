@@ -31,8 +31,7 @@ miditools/build/ReceiveMIDI/receivemidi_artefacts/receivemidi
 miditools/build/SendMIDI/sendmidi_artefacts/sendmidi
 ```
 
-Or optionally install to `/usr/local/bin` by default or specify a custom
-install direactory as follows:
+Or optionally install to `/usr/local/bin` by default or specify a custom install directory as follows:
 
 ```bash
 
